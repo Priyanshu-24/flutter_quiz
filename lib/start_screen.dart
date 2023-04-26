@@ -12,6 +12,8 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 200,
+            color: const Color.fromARGB(
+                181, 255, 255, 255), // tricy way to add transparency or opacity
           ),
           const Text(
             'Learn Flutter the fun way!',
