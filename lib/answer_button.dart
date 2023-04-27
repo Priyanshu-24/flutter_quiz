@@ -20,7 +20,9 @@ class AnswerButton extends StatelessWidget {
       ),
       child: Text(
         answerText,
-        style: const TextStyle(fontSize: 15),
+        style: const TextStyle(
+            // fontSize: 15,
+            ),
       ),
     );
   }
