@@ -12,12 +12,17 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  final List<String> selectedAnswers = [];
   String currentScreen = 'start-screen';
 
   void switchScreen() {
     setState(() {
       currentScreen = 'questions-screen';
     });
+  }
+
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
   }
 
   @override
@@ -37,7 +42,7 @@ class _QuizState extends State<Quiz> {
           ),
           child: currentScreen == 'start-screen'
               ? StartScreen(switchScreen)
-              : const QuestionsScreen(),
+              : QuestionsScreen(onSelectAnswer: chooseAnswer),
         ),
       ),
     );
